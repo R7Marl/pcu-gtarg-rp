@@ -1,0 +1,138 @@
+<html>
+<body id="body-pd">
+    <header class="header" id="header">
+        <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+<link rel="stylesheet" href="../home.css">
+<link rel="stylesheet" href="../home2.css">
+<link rel="stylesheet" href="../css/index.css">
+    </header>
+    <div class="l-navbar" id="nav-bar">
+        <nav class="nav">
+            <div> <a href="/" class="nav_logo"> <i class='bx bx-home nav_logo-icon'></i> <span class="nav_logo-name">GTARG</span> </a>
+                <div class="nav_list"> <a href="/" class="nav_link active"> <i class='bx bx-grid-alt nav_icon'></i> <span class="nav_name">Inicio</span> </a>
+             <a href="#" class="nav_link" aria-disabled="true"> <i class='bx bx-user nav_icon'></i> <span class="nav_name">Personajes</span> </a>  </div>
+                <a id="myBtn" href="#" class="nav_link"> <i class='bx bx-bitcoin nav_icon'></i> <span class="nav_name">Comprar NobaCoins</span> </a> 
+                <a href="https://discord.gg/gtarg" class="nav_link"> <i class='bx bx-help-circle'></i> <span class="nav_name">Ayuda</span> </a>  </div> 
+                
+            <a href="/logout" class="nav_link"> <i class='bx bx-log-out nav_icon'></i> <span class="nav_name">SignOut</span> </a>
+        </nav>
+    </div>
+    <!--Container Main start-->
+
+    <div class="main">
+{{#if success}}
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+  <strong>INFO:</strong> {{success}}
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+{{else}}
+{{#if message}}
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
+  <strong>Error:</strong> {{message}}
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+{{/if}}
+{{/if}}
+  <div class="square">
+    <h2><strong>{{cuentas}}</strong></h2>
+    <strong><p><i class='bx bxs-user'></i> Cuentas totales</p></strong>
+  </div>
+  <div class="square">
+    <h2><strong>{{characters}}</strong></h2>
+    <strong><p><i class='bx bxs-user'></i> Personajes Totales</p></strong>
+  </div>
+  <div class="square">
+    <h2 style="color: greenyellow;"><strong>ACTIVO</strong></h2>
+    <strong><p><i class='bx bx-server' ></i> Estado Server</p></strong>
+  </div>
+  <div class="square">
+    <h2><strong>1650</strong></h2>
+    <strong><p><i class='bx bxl-discord-alt' ></i> Usuarios Discord</p></strong>
+  </div>
+        <!--div class="title1">
+            <h1>PERSONAJES</h1>
+            <p>En esta sección podrás ver las estadisticas de tus personajes</p>
+        </div>
+        <div class="links">
+            {{#each personajes}}
+            <a href="character/{{characterID}}">
+            <div class="mini-ad">
+                <img src="../skins/{{skin}}.png" alt="Skin ID {{skin}}">
+                <p>{{characterName}}</p>
+                <p>Vida: {{health}}%</p>
+            </div>
+        </a>
+            {{/each}}
+                        {{#ifEquals personajes 0}}
+                        <p>No tienes personajes, crea uno</p>
+                        {{/ifEquals}}
+            <!-- Agrega más anuncios según sea necesario -->
+        </div>
+  <h1 class="centered-h1">Tus Personajes</h1>
+    </div>
+    <div class="characters">
+    {{#each personajes}}
+    <a href="character/{{characterID}}">
+  <div class="character">
+    <img src="../skins/{{skin}}.png" alt="{{skin}}">
+    <h3 style="color: white;">{{characterName}}</h3>
+    <p style="color: aliceblue;">ID: <strong>{{characterID}}</strong></p>
+    <p style="color: aliceblue;">Nivel: {{nivel}}</p>
+  </div>
+  </a>
+  {{/each}}
+                          {{#ifEquals personajes 0}}
+                        <p>No tienes personajes, crea uno</p>
+                        {{/ifEquals}}
+  <!-- Agrega más personajes aquí según sea necesario -->
+</div>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+              <img src="../../nobacoin.png" alt="Imagen de esquina" class="corner-image">
+          <h4>GTARG NOBA COINS</h4>
+         <form action="/coins" method="post">
+
+            <input type="number" name="idcharacter" placeholder="ID DEL PERSONAJE">
+            <p>El ID del personaje lo encuentras en los recuadros del inicio</p>
+            <br>
+            <br>
+            <input type="range" id="numberRange" name="nobacoins" min="3" max="63" step="3" value="3">
+            <p>NobaCoins seleccionados: <span id="selectedNumber">3</span></p>
+
+            <input type="checkbox" id="checkbox"> <strong>Acepto los términos y condiciones del servidor</strong>
+            <br>
+            <p>Vas a comprar Nobacoins:  (<strong id="selectedNumber1">3</strong>)</p>
+            <button type="submit" name="comprar_mercadopago" id="submitButton" disabled>Comprar por MercadoPago</button>
+            <button type="submit" name="comprar_paypal" id="submitButton1" disabled>Comprar por PayPal</button>
+         </form>
+          <p>2019-2022</p>
+        </div>
+      
+      </div>
+      <style>
+.corner-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px; /* Ajusta el tamaño según tus necesidades */
+  height: 100px; /* Ajusta el tamaño según tus necesidades */
+  z-index: 9999; /* Ajusta la capa z-index para que esté encima del contenido */
+}
+      </style>
+    <!--Container Main end-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="../index.js"></script>
+    </body>
+    </html>

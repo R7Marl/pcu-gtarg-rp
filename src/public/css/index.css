@@ -1,0 +1,138 @@
+@media (max-width: 768px) {
+  #my-body {
+    justify-content: flex-start; /* Cambia la alineación vertical al principio */
+  }
+
+  .login-container {
+    flex-direction: column; /* Apila los elementos verticalmente */
+    margin: 10px; /* Reduce el margen */
+  }
+
+  .login-image {
+    flex: none; /* Elimina la flexibilidad para que la imagen conserve su tamaño original */
+  }
+
+  .login-form {
+    flex: none; /* Elimina la flexibilidad para que el formulario conserve su tamaño original */
+    width: 100%; /* Ocupa todo el ancho disponible */
+  }
+}
+
+#body-pd {
+    font-family: Arial, sans-serif;
+    background-color: #333333; /* Fondo oscuro con un 85% de opacidad */
+}
+#my-body {
+  background-image: url('../../fondo1.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+.container-login {
+  background-color: rgba(255, 255, 255, 1.0);
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-weight: bold;
+    display: block;
+    color: #007bff;
+}
+
+.form-group input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 80%;
+}
+
+.login-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.login-button:hover {
+    background-color: #0056b3;
+}
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .centered-h1 {
+    text-align: center; /* Centra el texto horizontalmente */
+    margin-top: 10px; /* Ajusta el margen superior según tus preferencias */
+    color: white;
+  }
+  
+.square {
+    width: 180px;
+    height: 150px;
+    background-color:#4B454B;
+    margin: 10px;
+    text-align: center;
+    padding: 10px;
+    color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+  }
+  .square p {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-top: 50px; /* Ajusta el valor de margin-top según tus preferencias */
+  }
+  .square:hover {
+    transform: translateY(-5px); /* Mueve el elemento hacia arriba al pasar el mouse por encima */
+  }
+  /* Media query para dispositivos más pequeños */
+  @media (max-width: 768px) {
+    .main {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
+  
+  
+  
+  .characters {
+    display: flex;
+    justify-content: center; /* Distribuye los personajes de manera uniforme */
+    flex-wrap: wrap; /* Envuelve los personajes si no caben en una fila */
+    margin-top: 20px; /* Ajusta el margen superior según tus necesidades */
+  }
+  
+  .character {
+    width: 150px;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+    background-color: #4B454B;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+  }
+  .character:hover {
+    transform: translateY(-5px); /* Mueve el elemento hacia arriba al pasar el mouse por encima */
+  }
+  .character img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+  }
+  

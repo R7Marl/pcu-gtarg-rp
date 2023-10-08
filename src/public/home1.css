@@ -1,0 +1,99 @@
+#body-pd {
+    font-family: Arial, sans-serif;
+    background-color: #333333; /* Fondo oscuro con un 85% de opacidad */
+}
+/* Estilos para las pestañas */
+.tabs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+#estadisticas {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#facciones {
+    text-align: center;
+    margin-top: 20px;
+}
+.tablink {
+    background-color: #4B454B;
+    padding: 10px 5px;
+    border: none;
+    cursor: pointer;
+    margin-right: 3px;
+    border-radius: 5%;
+}
+
+/* Estilos para el contenido de las pestañas */
+.tabcontent {
+    display: none;
+}
+
+.character-stats {
+    background-color: #4B454B;
+    border: 1px solid #4B454B;
+    border-radius: 5px;
+    padding: 20px;
+    width: 700px; /* Ancho mayor para la tarjeta */
+    height: 400px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row; /* Cambia la dirección de flexión a fila */
+    align-items: center; /* Alinea verticalmente el contenido en el centro */
+}
+
+.stat {
+    margin: 10px; /* Espacio entre cada estadística */
+    align-items: center; /* Alinea verticalmente los elementos */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en la siguiente fila */
+    max-width: 50%; /* Ancho máximo para cada grupo de dos elementos */
+}
+
+.stat img {
+    width: 200px; /* Tamaño de la imagen */
+    height: 200px;
+    border-radius: 50%; /* Borde redondeado para la imagen */
+    margin-right: 20px; /* Espacio entre la imagen y los datos */
+}
+.stat1 {
+    margin: 10px;
+    align-items: center;
+}
+.stat1 img {
+    width: 200px;
+}
+
+.icon {
+    width: 20px; /* Tamaño de los iconos */
+    height: 20px;
+    margin-right: 10px; /* Espacio entre el icono y el texto */
+    fill: #333; /* Color de los iconos */
+}
+
+#vehiculos {
+    text-align: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    justify-content: center; /* Centra los elementos horizontalmente */
+    gap: 20px; /* Espacio entre los elementos */
+}
+
+
+.vehicle-stats {
+    background-color: #4B454B;
+    border: 1px solid #4B454B;
+    border-radius: 5px;
+    padding: 20px;
+    box-sizing: border-box;
+    display: inline-block;
+    margin: 0 20px 20px 0; /* Espacio entre los elementos y margen derecho */
+}
+
+/* Estilos específicos para el primer elemento si es necesario */
+.vehicle-stats:first-child {
+    margin-left: 0; /* Elimina el margen izquierdo del primer elemento */
+}

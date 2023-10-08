@@ -1,0 +1,101 @@
+.main {
+    /*display: flex;
+    flex-direction: row-reverse; /* Coloca los elementos en fila en orden inverso (derecha a izquierda) */
+    justify-content: space-between; /* Espacio entre los elementos */
+    /*align-items: flex-start; /* Alineación en la parte superior */
+}
+.title1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra verticalmente */
+    align-items: center; /* Centra horizontalmente */
+    height: 10vh;
+}
+
+.title1 h1 {
+    color: crimson;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.title1 p {
+    margin: 0;
+}
+
+.links {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    height: 100vh; 
+   /* flex-direction: column; /* Centra los elementos en columna */
+}
+
+.mini-ad {
+    border: 1px solid #ccc;
+    padding: 30px;
+    margin: 10px;
+    display: inline-block;
+    width: 200px; /* Ancho deseado para cada anuncio */
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+}
+
+.mini-ad img {
+    max-width: 100%;
+    height: auto;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4);
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%;
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .modal h4 {
+    color: #003147;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+  }
+  .modal ul li {
+    position: relative;
+    list-style: none;
+    margin-bottom: 20px;
+  }
+  .modal p {
+    color: lightblue;
+    font-size: 0.9em;
+    font-weight: 300;
+    line-height: 1.8em;
+  }
